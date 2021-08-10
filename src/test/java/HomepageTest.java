@@ -11,7 +11,7 @@ public void Click(){
     WebDriver driver=new ChromeDriver();
     driver.get("https://www.costcotravel.com/");
     CostcoTravelsHomePage homepage = new CostcoTravelsHomePage(driver);
-    homepage.widgetpackages.click();
+    homepage.getPackages().click();
     System.out.println(homepage.driver.getTitle());
     System.out.println(homepage.driver.getCurrentUrl());
 
