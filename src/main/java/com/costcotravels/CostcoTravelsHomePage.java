@@ -1,14 +1,13 @@
-import org.openqa.selenium.WebDriver;
+package com.costcotravels;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import com.TestBase.TestBase;
 
-public class CostcoTravelsHomePage {
+public class CostcoTravelsHomePage extends TestBase {
 
-    WebDriver driver;
-    public CostcoTravelsHomePage(WebDriver driver)
-    {
-        this.driver = driver;
+    public CostcoTravelsHomePage() {
         PageFactory.initElements(driver, this);
     }
 
@@ -18,4 +17,9 @@ public class CostcoTravelsHomePage {
     public WebElement getPackages() {
         return widgetpackages;
     }
+
+    public String validateHomePageTitle() {
+        return driver.getTitle();
+    }
+
 }
