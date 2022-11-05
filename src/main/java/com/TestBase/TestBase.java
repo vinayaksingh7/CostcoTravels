@@ -30,8 +30,14 @@ public class TestBase {
         String browserName = prop.getProperty("browser");
 
         if (browserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\vinay\\Downloads\\chromedriver_win32\\chromedriver.exe");
-            driver = new ChromeDriver();
+            
+            ChromeOptions options = new ChromeOptions();
+			options.addArguments("headless");
+			options.addArguments("disable-gpu");
+			
+			System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
+			driver = new ChromeDriver(options);
+           
         } else if (browserName.equals("FF")) {
             System.setProperty("webdriver.gecko.driver", "C:\\Users\\vinay\\Downloads\\chromedriver_win32\\chromedriver.exe");
             driver = new FirefoxDriver();
