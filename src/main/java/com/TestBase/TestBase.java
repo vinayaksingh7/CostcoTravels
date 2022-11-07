@@ -2,10 +2,11 @@ package com.TestBase;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -33,14 +34,17 @@ public class TestBase {
             
             ChromeOptions options = new ChromeOptions();
 	        options.addArguments("headless");
-                options.addArguments("disable-gpu");
+            options.addArguments("disable-gpu");
 			
 		driver = new ChromeDriver(options);
 			//System.setProperty("webdriver.chrome.driver","/usr/bin/chromedriver");
 			
            
         } else if (browserName.equals("FF")) {
-            System.setProperty("webdriver.gecko.driver", "C:\\Users\\vinay\\Downloads\\chromedriver_win32\\chromedriver.exe");
+            FirefoxOptions options1 = new FirefoxOptions();
+            options1.addArguments("headless");
+            options1.addArguments("disable-gpu");
+           //System.setProperty("","/usr/bin/chromedriver");
             driver = new FirefoxDriver();
         }
 
