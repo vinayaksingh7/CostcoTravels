@@ -18,7 +18,6 @@ public class CostcoTravelsHomePage extends TestBase {
         return widgetpackages;
     }
 
-    //Testing git-WebHooks
     public String validateHomePageTitle() {
         return driver.getTitle();
     }
