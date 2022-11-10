@@ -18,6 +18,8 @@ public class CostcoTravelsHomePage extends TestBase {
         return widgetpackages;
     }
 
+    
+    //Test method
     public String validateHomePageTitle() {
         return driver.getTitle();
     }
