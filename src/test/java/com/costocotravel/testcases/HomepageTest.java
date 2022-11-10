@@ -27,7 +27,7 @@ public class HomepageTest extends TestBase {
         String title = homePage.validateHomePageTitle();
         Assert.assertEquals("Home | Costco Travel", title);
         System.out.println("Title is -" + title);
-        System.out.println("Testing webHook - 1 - COLLAB with RAHUL");
+        System.out.println("Testing webHook - COLLAB with RAHUL");
     }
 
     @After
